@@ -1,0 +1,15 @@
+/*
+!.gitignore
+!/app/
+/app/.htaccess
+/app/autoload.php
+/app/bootstrap.php
+/app/functions.php
+/app/etc
+!/app/design
+!/app/design/frontend
+/app/design/adminhtml
+!/app/design/frontend/Nil
+!/app/design/frontend/Nil/*
+!/app/design/frontend/Magneto
+!/app/design/frontend/Magento/*

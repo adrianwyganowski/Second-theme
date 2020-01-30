@@ -1,0 +1,29 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="default_head_blocks" />
+    <body>
+
+        <!-- Logo  -->
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_img_width" xsi:type="number">65</argument>
+                <argument name="logo_img_height" xsi:type="number">55</argument>
+                <argument name="logo_alt" xsi:type="string">second theme logo</argument>
+            </arguments>
+        </referenceBlock>
+
+            <!-- Changed width of pages to full width -->
+
+        <referenceContainer name="main.content" htmlTag="main" htmlClass="page-main-full-width" />
+
+
+        <!-- <referenceBlock name="catalog.topnav" remove="true"/>
+            <referenceBlock name="store.menu">
+            <block name="main.menu" class="Snowdog\Menu\Block\Menu">
+                <arguments>
+                    <argument name="menu" xsi:type="string">main</argument>
+                </arguments>
+            </block>
+        </referenceBlock> -->
+
+    </body>
+</page>
