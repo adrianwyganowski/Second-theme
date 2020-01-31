@@ -11,19 +11,25 @@
             </arguments>
         </referenceBlock>
 
-            <!-- Changed width of pages to full width -->
+        <!-- Changed width of pages to full width -->
 
         <referenceContainer name="main.content" htmlTag="main" htmlClass="page-main-full-width" />
 
+         <!-- Created logo container and moved navigation, logo to header.panel.wrapper -->
+        <container name="logo.container" label="Logo container" htmlTag="div" htmlClass="logo-container"/> 
+        <move element="navigation.sections" destination="header.panel.wrapper" before="-"  />
+        <move element="logo.container" destination="header.panel.wrapper" after="navigation.sections"  />
+        <move element="logo" destination="logo.container" />
 
-        <!-- <referenceBlock name="catalog.topnav" remove="true"/>
-            <referenceBlock name="store.menu">
-            <block name="main.menu" class="Snowdog\Menu\Block\Menu">
-                <arguments>
-                    <argument name="menu" xsi:type="string">main</argument>
-                </arguments>
-            </block>
-        </referenceBlock> -->
+        <!-- Deleted welcom msg -->
+
+        <referenceBlock name="header" remove="true"/>
+
+        <referenceContainer name="header.panel.wrapper">
+            <block  name="search.icon" template="Magento_Theme::search_icon.phtml"/>
+            <block  name="menu.icon" template="Magento_Theme::menu_icon.phtml"/>
+        </referenceContainer>
+        
 
     </body>
 </page>
