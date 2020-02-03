@@ -2,7 +2,7 @@
     <update handle="default_head_blocks" />
     <body>
 
-        <move element="minicart" destination="header.panel" after="-" />
+        <move element="minicart" destination="header.icons.container" before="-" />
         
     </body>
 </page>

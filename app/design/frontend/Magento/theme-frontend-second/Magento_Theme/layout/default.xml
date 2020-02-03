@@ -7,7 +7,7 @@
             <arguments>
                 <argument name="logo_img_width" xsi:type="number">65</argument>
                 <argument name="logo_img_height" xsi:type="number">55</argument>
-                <argument name="logo_alt" xsi:type="string">second theme logo</argument>
+                <argument name="logo_alt" xsi:type="string">Second theme logo</argument>
             </arguments>
         </referenceBlock>
 
@@ -16,20 +16,32 @@
         <referenceContainer name="main.content" htmlTag="main" htmlClass="page-main-full-width" />
 
          <!-- Created logo container and moved navigation, logo to header.panel.wrapper -->
+
         <container name="logo.container" label="Logo container" htmlTag="div" htmlClass="logo-container"/> 
         <move element="navigation.sections" destination="header.panel.wrapper" before="-"  />
         <move element="logo.container" destination="header.panel.wrapper" after="navigation.sections"  />
         <move element="logo" destination="logo.container" />
 
-        <!-- Deleted welcom msg -->
+        <!-- Deleted welcome msg -->
 
         <referenceBlock name="header" remove="true"/>
 
-        <referenceContainer name="header.panel.wrapper">
-            <block  name="search.icon" template="Magento_Theme::search_icon.phtml"/>
+        <!-- Created search and menu -->
+
+        <container name="header.icons.container" label="Header icons container" htmlTag="div" htmlClass="header-icons-container">
+            <block  name="search.and.menu.icon" template="Magento_Theme::search_icon.phtml"/>
             <block  name="menu.icon" template="Magento_Theme::menu_icon.phtml"/>
-        </referenceContainer>
-        
+        </container>
+        <move element="header.icons.container" destination="header.panel.wrapper"/>
+
+        <!-- Created container for top links and search -->
+
+        <container name="menu.search.container" label="Menu search container" htmlTag="div" htmlClass="menu-search-container"/>     
+        <move element="top.search" destination="menu.search.container"/>    
+        <move element="menu.search.container" destination="header.panel.wrapper"/>
+        <container name="menu.top.links.container" label="Menu top links container" htmlTag="div" htmlClass="menu-top-links-container"/>
+        <move element="menu.top.links.container" destination="header.panel.wrapper"/>
+        <move element="header.panel" destination="menu.top.links.container"/>
 
     </body>
 </page>

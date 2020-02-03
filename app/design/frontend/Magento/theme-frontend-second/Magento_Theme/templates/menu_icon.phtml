@@ -4,8 +4,19 @@
  * See COPYING.txt for license details.
  */
 ?>
-<div class="menu-icon-container">
+<div class="menu-icon-container" onclick="displayMenuElement('menu-top-links-container')" >
     <div class="menu-icon">
         &#9776;
     </div>
+    <p class="menu-label">
+        MENU
+    </p>
 </div>
+
+<script>
+
+function displayMenuElement(elementClassName){
+    const element = document.getElementsByClassName(elementClassName)[0];
+    element.classList.toggle("menuDisplayed")
+}
+</script>
