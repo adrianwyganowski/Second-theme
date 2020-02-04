@@ -26,10 +26,8 @@
 
         <referenceBlock name="header" remove="true"/>
 
-        <!-- Created search and menu -->
-
         <container name="header.icons.container" label="Header icons container" htmlTag="div" htmlClass="header-icons-container">
-            <block  name="search.and.menu.icon" template="Magento_Theme::search_icon.phtml"/>
+            <block  name="search.icon" template="Magento_Theme::search_icon.phtml"/>
             <block  name="menu.icon" template="Magento_Theme::menu_icon.phtml"/>
         </container>
         <move element="header.icons.container" destination="header.panel.wrapper"/>

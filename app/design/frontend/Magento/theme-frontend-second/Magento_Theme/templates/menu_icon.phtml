@@ -4,7 +4,7 @@
  * See COPYING.txt for license details.
  */
 ?>
-<div class="menu-icon-container" onclick="displayMenuElement('menu-top-links-container')" >
+<div class="menu-icon-container" >
     <div class="menu-icon">
         &#9776;
     </div>
@@ -13,10 +13,12 @@
     </p>
 </div>
 
-<script>
-
-function displayMenuElement(elementClassName){
-    const element = document.getElementsByClassName(elementClassName)[0];
-    element.classList.toggle("menuDisplayed")
+<script type="text/x-magento-init">
+{
+    ".menu-icon-container":{
+        "Magento_Theme/js/displayMenu" :{
+            "target": "menu-top-links-container"
+        }
+    }
 }
 </script>

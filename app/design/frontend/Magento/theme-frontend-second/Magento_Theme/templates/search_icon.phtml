@@ -5,7 +5,7 @@
  */
 ?>
 
-<div class="search-icon-container" onclick="displayMenuElement('menu-search-container')" >
+<div class="search-icon-container"  >
     <div class="search-icon">
         <svg enable-background="new 3.5 0.5 18 18" height="18" viewBox="3.5 .5 18 18" width="18" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2">
@@ -18,5 +18,13 @@
     </p>
 </div>
 
-
+<script type="text/x-magento-init">
+{
+    ".search-icon-container":{
+        "Magento_Theme/js/displayMenu" :{
+            "target": "menu-search-container"
+        }
+    }
+}
+</script>
 

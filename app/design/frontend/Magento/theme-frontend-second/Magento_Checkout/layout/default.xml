@@ -4,5 +4,12 @@
 
         <move element="minicart" destination="header.icons.container" before="-" />
         
+        <container name="menu.cart.container" label="Menu cart container" htmlTag="div" htmlClass="menu-cart-container">
+            <block  name="cart.content.menu" template="Magento_Checkout::cart/minicart_content.phtml"/>
+        </container>
+        
+        
+        <!-- <move element="menu.cart.container" destination="header.panel.wrapper" before="-"/> -->
+
     </body>
 </page>

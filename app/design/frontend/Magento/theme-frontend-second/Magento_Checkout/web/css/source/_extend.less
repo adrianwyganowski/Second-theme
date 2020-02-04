@@ -1,0 +1,56 @@
+//
+//  Common 
+//  ---------------------------------------------
+//
+& when (@media-common = true) {
+
+    .minicart-wrapper{
+
+        .menu-cart-container{
+            position: absolute;
+            z-index: 1; 
+            top:-100px;
+            left:-270px;
+            
+            height: 10px;
+            overflow: hidden;
+            width: 390px;
+            padding: 25px 20px;
+            border: 1px solid @color-gray-light2;
+            box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
+
+            transition: top 0.4s;
+
+            .block-title{
+                display: none;
+            }
+
+            #btn-minicart-close{
+                display: none;
+            }
+        }
+
+        .menuDisplayed{
+            top:70px;
+            overflow: unset;
+            height: unset;
+
+        }
+    }
+
+ 
+   
+
+    .block-minicart:before {
+        content:unset;
+    }
+}
+
+//
+//  Desktop 
+//  ---------------------------------------------
+//
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+}   
