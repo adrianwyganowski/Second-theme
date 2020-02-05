@@ -7,6 +7,17 @@
 /** @var $block \Magento\Checkout\Block\Cart\Sidebar */
 ?>
 
-<div class="test">
-    test
+<div class="menu-cart-container">
+    <div id="minicart-content-wrapper" class="cart-content" data-bind="scope: 'minicart_content'">
+        <!-- ko template: getTemplate() --><!-- /ko -->
+    </div>
+    <?= $block->getChildHtml('minicart.addons') ?>
+
+    <script>
+        require(['jquery'], function ($) {
+            $('a.action.showcart').click(function() {
+            return
+            });
+        });
+    </script>
 </div>

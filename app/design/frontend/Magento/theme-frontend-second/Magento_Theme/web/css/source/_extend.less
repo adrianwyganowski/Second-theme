@@ -7,12 +7,62 @@
     #maincontent{
         margin-top:56px;
     }
-    
-    .logo{
-        float: unset;
+
+    .page-header{
+        text-transform: uppercase;
+        font-family: Oswald-medium;
+        letter-spacing: 2px;
+
+        .logo{
+            float: unset;
+        }
+
     }
+    
+    .page-footer{
+        background-image: url(../images/footer-bg.png);
+        
+        color:#fff;
 
+        a{
+            color:#fff;
+        }
 
+        .footer.content{
+            max-width: unset;
+            border: unset;
+           
+            text-transform: uppercase;
+            font-family: Oswald-medium;
+        }
+    }
+    
+}
+
+//
+//  Mobile and tablets
+//  ---------------------------------------------
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .page-header{
+        
+        .logo-container{
+            display: flex;
+            justify-content: flex-end;
+        
+            .logo{
+                margin-top: 10px;
+            }
+        }
+
+        .header-icons-container{
+            display: none;
+        }
+
+        .menu-cart-content-container{
+            display: none;
+        }
+    }
 }
 
 //
@@ -34,7 +84,6 @@
 
             background-color: #fff;
 
-            text-transform: uppercase;
       
             .nav-sections{
                 z-index: 3;
@@ -55,7 +104,11 @@
                         margin: 0;
 
                         .level-top{
-                            padding: 0 0 0 15px;
+                            padding: 0 7px 0 7px;
+                            height: 56px;
+                        }
+                        .submenu {
+                            padding: 0;
                         }
                     }
                 }
@@ -99,7 +152,6 @@
                     }
                     
                 }
-               
                 .search-icon-container{
                     display: flex;
                     align-items: center;
@@ -126,7 +178,8 @@
                     .menu-icon{
                         margin-left: 15px;
 
-                        font-size: 2.5rem;
+                        font-size: 2.3rem;
+                        margin-bottom: 5px;
                     }
 
                     .menu-label{
@@ -160,8 +213,6 @@
                 display: flex;
                 justify-content: center;
 
-                background: #fff;
-
                 transition: top 0.4s;
 
                 .panel.header{
@@ -170,6 +221,8 @@
                     border: 1px solid @color-gray-light2;
                     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
 
+                    background: #fff;
+
                     li:first-child{
                         margin: 0;
                     }
@@ -177,15 +230,10 @@
                         margin: 0;
                     }
                 }
-                
             }
             .menuDisplayed{
                 top:70px;
-               
             }
         }
-    }
-    .footer.content{
-        max-width: unset;
     }
 }   

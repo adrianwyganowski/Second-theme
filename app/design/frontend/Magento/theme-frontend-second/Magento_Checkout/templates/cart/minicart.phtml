@@ -27,20 +27,7 @@
         </p>
         
     </a>
-        <div class="menu-cart-container">
-            <div id="minicart-content-wrapper" data-bind="scope: 'minicart_content'">
-                <!-- ko template: getTemplate() --><!-- /ko -->
-            </div>
-            <?= $block->getChildHtml('minicart.addons') ?>
 
-            <script>
-                require(['jquery'], function ($) {
-                    $('a.action.showcart').click(function() {
-                    return
-                    });
-                });
-            </script>
-        </div>
 
     <script>
         window.checkout = <?= /* @noEscape */ $block->getSerializedConfig() ?>;
@@ -63,7 +50,7 @@
 {
     ".action.showcart":{
         "Magento_Theme/js/displayMenu" :{
-            "target": "menu-cart-container"
+            "target": "cart-content"
         }
     }
 }

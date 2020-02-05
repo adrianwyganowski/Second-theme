@@ -26,9 +26,11 @@
 
         <referenceBlock name="header" remove="true"/>
 
+        <!-- Created search and menu icons -->
+
         <container name="header.icons.container" label="Header icons container" htmlTag="div" htmlClass="header-icons-container">
-            <block  name="search.icon" template="Magento_Theme::search_icon.phtml"/>
-            <block  name="menu.icon" template="Magento_Theme::menu_icon.phtml"/>
+            <block name="search.icon" template="Magento_Theme::search_icon.phtml"/>
+            <block name="menu.icon" template="Magento_Theme::menu_icon.phtml"/>
         </container>
         <move element="header.icons.container" destination="header.panel.wrapper"/>
 
@@ -40,6 +42,11 @@
         <container name="menu.top.links.container" label="Menu top links container" htmlTag="div" htmlClass="menu-top-links-container"/>
         <move element="menu.top.links.container" destination="header.panel.wrapper"/>
         <move element="header.panel" destination="menu.top.links.container"/>
+
+          <!-- Deleted copyright and report bugs blocks -->
+
+        <referenceBlock name="copyright" remove="true"/>
+        <referenceBlock name="report.bugs" remove="true"/>
 
     </body>
 </page>
