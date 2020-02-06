@@ -1,27 +1,16 @@
 //
-//  Common 
+//  Common
 //  ---------------------------------------------
 //
+
 & when (@media-common = true) {
-
-
-}
-
-//
-//  Desktop 
-//  ---------------------------------------------
-//
-
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-    
-    .menu-cart-container{
-
-        .cart-content{
+    .menu-cart-container {
+        .cart-content {
             position: absolute;
-            z-index: 1; 
-            top:-100px;
-            right:70px;
-            
+            z-index: 1;
+            top: -100px;
+            right: 70px;
+
             height: 10px;
             overflow: hidden;
             width: 390px;
@@ -33,19 +22,34 @@
 
             transition: top 0.4s;
 
-            .block-title{
+            .block-title {
                 display: none;
             }
 
-            #btn-minicart-close{
+            #btn-minicart-close {
                 display: none;
             }
         }
-        .menuDisplayed{
-            top:70px;
+        .menuDisplayed {
+            top: 70px;
             overflow: unset;
             height: unset;
-
         }
     }
-}   
+}
+
+//
+//  Mobile and tablets
+//  ---------------------------------------------
+
+.media-width(@extremum, @break)
+    when
+    (@extremum = "max")
+    and
+    (@break = @screen__m) {
+    .page-header {
+        .menu-cart-content-container {
+            display: none;
+        }
+    }
+}
