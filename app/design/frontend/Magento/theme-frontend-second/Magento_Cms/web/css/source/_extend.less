@@ -1,0 +1,156 @@
+//
+//  Common
+//  ---------------------------------------------
+//
+& when (@media-common = true) {
+    .carusel{
+
+        .tns-item{
+            height: 800px;
+        }
+
+        .first-slide{
+            background-image: url(../images/first-slide.jpg);
+            background-position:  center;
+
+            color: transparent;
+            -webkit-text-stroke-color: black;
+
+            text-transform: uppercase;
+                .first-slide-text{
+                    font-family: Oswald-Bold;
+                }
+            }
+        .second-slide{
+            background-image: url(../images/second-slide.jpg);
+            background-position:  center;
+            text-align: center;
+            .second-slide-texts-container{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                color: #fff;
+
+                font-family: Oswald-ExtraLight;
+
+                .second-slide-span{
+                    font-family: Oswald-SemiBold;
+                }
+            }
+        }
+        .third-slide{
+            position: relative;
+
+            background-image: url(../images/third-slide.jpg);    
+            background-position:  center;
+            color: transparent;
+                        
+            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color: #000;
+            
+
+            #third-slide-text{
+                font-family: Oswald-Medium;
+            }
+            #third-slide-header{
+               
+                font-family: Oswald-Bold;
+
+            }
+        }
+    }
+}
+
+
+//
+//  Mobile and tablets
+//  ---------------------------------------------
+
+.media-width(@extremum, @break)
+    when
+    (@extremum = "max")
+    and
+    (@break = @screen__m) {
+        .carusel{
+            .first-slide{
+                .first-slide-text{
+                    margin-bottom: 10px;
+
+                    font-size: 5rem;
+                    -webkit-text-stroke-width: 2px;
+                }
+                
+            }
+
+            .second-slide{
+
+                .second-slide-texts-container{
+                    font-size: 6rem;
+                }
+            }
+
+            .third-slide{
+                #third-slide-text{
+                    margin-top: 370px;
+                    
+                    text-align: center;
+                    font-size: 15rem;
+                }
+                #third-slide-header{
+                  
+                    text-align: center;
+                    font-size: 15rem;
+                }
+            }
+        }
+
+}
+
+
+//
+//  Desktop
+//  ---------------------------------------------
+//
+
+.media-width(@extremum, @break)
+    when
+    (@extremum = "min")
+    and
+    (@break = @screen__m) {
+
+        .carusel{
+            .first-slide{
+                .first-slide-text{
+                    font-size: 8.6rem;
+                    letter-spacing: 4px;
+                    -webkit-text-stroke-width: 3px;
+                }  
+            }
+
+            .second-slide{
+
+                .second-slide-texts-container{
+                    font-size: 8rem;
+                }
+            }
+
+            .third-slide{
+                #third-slide-text{
+                    margin:0 0 200px 50px;
+                
+                    font-size: 15rem;
+                }
+                #third-slide-header{
+                    position: absolute;
+                    right: 100px;
+    
+                    font-size: 25rem;
+                }
+            }
+
+        }
+    }

@@ -1,0 +1,63 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+<link rel="stylesheet" type="text/css" href="<?php echo $block->getViewFileUrl('css/tiny-slider.css')?>">
+
+<div class="carusel" >
+
+    <div class="first-slide">
+        <p class="first-slide-text">Snowboards Bindings</p>
+        <p class="first-slide-text">Snowboards Boots</p>
+        <p class="first-slide-text">Snowboards</p>
+        <p class="first-slide-text">Helmets</p>
+        <p class="first-slide-text">Goggles</p>
+        <p class="first-slide-text">Clothes</p>
+    </div>
+
+    <div class="second-slide">  
+        <div class="second-slide-texts-container"> 
+            <p>
+                <span class="second-slide-span">BEST</span> SNOWBOARDS
+            </p> 
+            <p>
+                FOR
+            </p> 
+            <p>
+                <span class="second-slide-span">BEST</span> EXPERIENCE
+            </p>
+        </div>
+    </div>
+
+    <div class="third-slide"> 
+        <div id="third-slide-text">
+            feel
+        </div>
+        <div id="third-slide-header">
+            FREE
+        </div>
+    </div>
+</div>
+
+
+<script>
+    (function  () {
+        require(["tns"],function() {
+            var slider = tns({
+                container: '.carusel',
+                items: 1,
+                nav: false,
+                controls: false,
+                autoHeight:true,
+                autoplay:true, 
+                autoplayHoverPause: false,
+                rewind: true,
+                autoplayButtonOutput: false
+
+            });
+        });
+    })();
+</script>
