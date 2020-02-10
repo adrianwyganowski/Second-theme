@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+
+        <!-- Created container for selected filters container and toolbar container -->
+
+        <container name="filters.and.sorter.container" label="Filters and sorter container" htmlTag="div" htmlClass="filers-and-sorter-container" >
+
+            <container name="chosen.filters" label="Chosen filters container" htmlTag="div" htmlClass="chosen-filers-container" />
+            <container name="toolbar.container" label="Toolbar container" htmlTag="div" htmlClass="toolbar-container" />
+
+        </container>
+
+        <!-- Moved container with navigation and toolbar to beginning of content-->
+
+        <move element="filters.and.sorter.container" destination="content" before="-" />
+
+        <!-- Moved filters state to new container -->
+
+        <move element="catalog.navigation.state" destination="chosen.filters" before="-" />
+
+        <!-- Moved navigation and toolbar to new container -->
+
+        <move element="catalog.leftnav" destination="toolbar.container" before="-" />
+        <move element="product_list_toolbar" destination="toolbar.container" after="catalog.leftnav" />
+        <!-- MOVING TOOLBAR MAKES FATAL ERROR IN CATALOG PAGES TO DO -->
+
+       
+
+        
+
+    </body>
+</page>

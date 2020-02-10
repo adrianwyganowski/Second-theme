@@ -1,0 +1,96 @@
+//
+//  Common
+//  ---------------------------------------------
+//
+& when (@media-common = true) {
+
+    .chosen-filers-container{
+        .filter-current{
+            display: flex;
+            .items{
+                padding-left: 40px;
+            }
+        }
+    }
+ 
+    .toolbar-container{
+        display: flex;
+        width: 100%;
+
+        .block.filter{
+            width: 70%;
+        }
+
+        .block-content.filter-content{
+            display: flex;
+
+            .filter-options{
+                display: flex;
+                justify-content: space-between;
+
+                .catalog-filter{
+                    max-height: 25px;
+                    overflow: hidden;
+
+                    transition: max-height 0.4s;
+
+                    cursor: pointer;
+                }
+
+    
+                .Size-filter-option{
+                    min-width: 25%;
+
+                    .swatch-attribute-options {
+                        display: flex;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        
+                    }
+                }
+    
+                .Price-filter-option{
+                    min-width: 50%;
+    
+                    .items{
+                    
+                        column-count: 2;
+                        
+                    }
+                }
+    
+                .Color-filter-option{
+                    display: flex;
+                    flex-wrap: wrap;
+                    min-width: 25%;
+
+                    .swatch-attribute-options{
+                        display: flex;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                    }
+    
+    
+                }
+
+                .filter-displayed{
+                    max-height: 500px;
+                }
+            }   
+        }
+        .toolbar-products{
+            width: 30%;
+            margin-bottom:0;
+
+            .toolbar-amount{
+                padding: 0;
+                margin-right: 10px;
+            }
+
+            .toolbar-sorter.sorter{
+                padding: 0;
+            }
+        }
+    }
+    
+}

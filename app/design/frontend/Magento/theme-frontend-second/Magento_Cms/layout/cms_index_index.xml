@@ -7,9 +7,13 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
 
+    <!-- Created container for carusel -->
+
     <referenceBlock name="content">
             <container name="main.page.carusel.container" label="Main page carusel container" htmlTag="div" htmlClass="main-page-carusel"/>
     </referenceBlock>
+
+    <!-- Added phtml template to carusel container -->
 
     <referenceContainer name="main.page.carusel.container">
         <block name="main.page.carusel" template="Magento_Cms::main_page_carusel.phtml" />
