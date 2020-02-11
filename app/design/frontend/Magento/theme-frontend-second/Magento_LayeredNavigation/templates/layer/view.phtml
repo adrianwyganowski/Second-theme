@@ -14,33 +14,28 @@
 
 <?php if ($block->canShowBlock()) : ?>
     <div class="block filter">
-
-
-
+        <p class="filter-header">Filters: </p>
         <div class="block-content filter-content">
-
             <?php $wrapOptions = false; ?>
             <div class="filter-container">
-
                 <?php foreach ($block->getFilters() as $filter) : ?>
                     <?php if (!$wrapOptions) : ?>
                         <dl class="filter-options" id="narrow-by-list">
                         <?php $wrapOptions = true;
                     endif; ?>
-                    
                         <?php if ($filter->getName() == "Price" || $filter->getName() == "Size" || $filter->getName() == "Color") : ?>
                             <?php if ($filter->getItemsCount()) : ?>
-                                
-                                
                                 <div class="<?= $block->escapeHtmlAttr($filter->getName()) ?>-filter-option catalog-filter option">
-                                    <dt role="heading" aria-level="3" class="filter-options-title"><?= $block->escapeHtml(__($filter->getName())) ?> :</dt>
+                                    <dt role="heading" aria-level="3" class="filter-options-title">
+                                        <?= $block->escapeHtml(__($filter->getName())) ?> 
+                                        <div class="filter-option-span-container">     
+                                            <span class="filter-option-span"></span>
+                                        </div>       
+                                    </dt>
                                     <dd class="filter-options-content"><?= /* @noEscape */ $block->getChildBlock('renderer')->render($filter) ?></dd>
                                 </div>
-                                
                             <?php endif; ?>
                         <?php endif; ?>
-                        
-            
                 <?php endforeach; ?>
             </div>
             <?php if ($wrapOptions) : ?>
@@ -54,6 +49,7 @@
 <!-- More info https://alanstorm.com/why-you-cant-remove-the-productlisttoolbar/  -->
 <script type="text/x-magento-init">
 {
+    
     "*":{
         "Magento_LayeredNavigation/js/removeSecondToolbar" :{
         }
@@ -61,7 +57,7 @@
 
     ".filter-options":{
         "Magento_LayeredNavigation/js/showFilters" :{
-            "filters": ["Size-filter-option", "Price-filter-option", "Color-filter-option"]
+           
         }
     }
 }

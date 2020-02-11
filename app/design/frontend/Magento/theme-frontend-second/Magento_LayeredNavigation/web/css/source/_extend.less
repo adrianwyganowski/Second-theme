@@ -3,94 +3,174 @@
 //  ---------------------------------------------
 //
 & when (@media-common = true) {
-
-    .chosen-filers-container{
-        .filter-current{
+    .chosen-filers-container {
+        border-bottom: 1px solid @color-gray-light2;
+        margin-bottom: 40px;
+      
+        .filter-current {
             display: flex;
-            .items{
+            margin: 0 10px;
+
+            .items {
+                display: flex;
                 padding-left: 40px;
+                .item{
+                    margin-left: 40px;
+
+                }
             }
         }
     }
- 
-    .toolbar-container{
+
+    .toolbar-container {
         display: flex;
         width: 100%;
 
-        .block.filter{
-            width: 70%;
+        .block.filter {
+            width: 100%;
+            margin: 0 10px;
+
+            .filter-header {
+                margin: 0;
+
+                font-size: 1.8rem;
+            }
         }
 
-        .block-content.filter-content{
+        .block-content.filter-content {
             display: flex;
+            padding: 10px;
 
-            .filter-options{
-                display: flex;
-                justify-content: space-between;
-
-                .catalog-filter{
+            .filter-container {
+                width: 100%;
+                .filter-options {
+                    display: flex;
+                    justify-content: space-between;
                     max-height: 25px;
                     overflow: hidden;
 
                     transition: max-height 0.4s;
 
                     cursor: pointer;
-                }
 
-    
-                .Size-filter-option{
-                    min-width: 25%;
+                    .catalog-filter {    
 
-                    .swatch-attribute-options {
-                        display: flex;
-                        justify-content: center;
-                        flex-wrap: wrap;
-                        
+                        .filter-options-title {
+                            display: flex;
+
+                            .filter-option-span{
+                                position: relative;
+                                bottom: 3px;
+                            }
+
+                            .filter-option-span::after {
+                                content: "\e622";
+                                display: block;
+
+                                font-size: 2rem;
+                                font-family: "Icons";
+
+                                transition: all 0.3s;
+                            }
+
+                        }
                     }
-                }
-    
-                .Price-filter-option{
-                    min-width: 50%;
-    
-                    .items{
-                    
-                        column-count: 2;
-                        
-                    }
-                }
-    
-                .Color-filter-option{
-                    display: flex;
-                    flex-wrap: wrap;
-                    min-width: 25%;
 
-                    .swatch-attribute-options{
-                        display: flex;
-                        justify-content: center;
-                        flex-wrap: wrap;
-                    }
-    
-    
-                }
+                    .Size-filter-option {
+                        min-width: 30%;
 
-                .filter-displayed{
+                        .swatch-attribute-options {
+                            display: flex;
+                            justify-content: center;
+                            flex-wrap: wrap;
+                        }
+                    }
+
+                    .Price-filter-option {
+                        min-width: 40%;
+
+
+                    }
+
+                    .Color-filter-option {
+                        min-width: 30%;
+
+                        .swatch-attribute-options {
+                            display: flex;
+                            justify-content: center;
+                            flex-wrap: wrap;
+                        }
+                    }
+
+                }
+                .filters-displayed {
                     max-height: 500px;
                 }
-            }   
+               
+            }
         }
-        .toolbar-products{
+        .toolbar-products {
             width: 30%;
-            margin-bottom:0;
+            margin-bottom: 0;
 
-            .toolbar-amount{
+            .toolbar-amount {
                 padding: 0;
                 margin-right: 10px;
             }
 
-            .toolbar-sorter.sorter{
+            .toolbar-sorter.sorter {
                 padding: 0;
             }
         }
     }
-    
 }
+
+
+
+//
+//  Mobile and tablets
+//  ---------------------------------------------
+//
+
+.media-width(@extremum, @break)
+    when
+    (@extremum = "max")
+    and
+    (@break = @screen__m) {
+
+        .block-content.filter-content {
+            .filter-container {
+                .filter-options {
+                    .Price-filter-option {
+                        .items {
+                            column-count: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+//
+//  Desktop
+//  ---------------------------------------------
+//
+
+    .media-width(@extremum, @break)
+    when
+    (@extremum = "min")
+    and
+    (@break = @screen__m) {
+        .block-content.filter-content {
+            .filter-container {
+                .filter-options {
+                    .Price-filter-option {
+                        .items {
+                            column-count: 2;
+                        }
+                    }
+                }
+            }
+        }
+    }

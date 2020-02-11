@@ -1,0 +1,54 @@
+//
+//  Common
+//  ---------------------------------------------
+//
+& when (@media-common = true) {
+
+    .size{
+        .swatch-option.text{
+            border-radius: 100%;
+            width: 30px;
+            height: 30px;
+            padding: 0;
+
+            font-size: 1.3rem;
+            line-height: 29px;
+
+            transition: all 0.2s;
+        } 
+        .swatch-option.text:hover{
+            outline: none;
+            border: 1px solid #000;
+
+            transform: scale(1.2)
+        }
+        .swatch-option.text.selected{
+            box-shadow: 0 0 4px 2px #006bb4;
+        }
+
+    }
+    .color{
+        .swatch-option.color{
+            border-radius: 100%;
+            width: 30px;
+            height: 30px;
+            padding: 0;
+
+            transition: all 0.2s;
+        } 
+        .swatch-option.color:hover{
+            outline: none;
+            border: 1px solid #000;
+
+            transform: scale(1.2)
+        }
+        .swatch-option.color.selected{
+            box-shadow: 0 0 4px 2px #006bb4;
+        }
+    }
+
+    .swatch-option.selected{
+        outline: none;
+        box-shadow: 0 0 5px 3px #006bb4;
+    }
+}

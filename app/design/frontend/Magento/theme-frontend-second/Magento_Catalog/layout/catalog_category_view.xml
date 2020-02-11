@@ -25,15 +25,9 @@
 
         <move element="catalog.navigation.state" destination="chosen.filters" before="-" />
 
-        <!-- Moved navigation and toolbar to new container -->
+        <!-- Moved navigation to new container -->
 
         <move element="catalog.leftnav" destination="toolbar.container" before="-" />
-        <move element="product_list_toolbar" destination="toolbar.container" after="catalog.leftnav" />
-        <!-- MOVING TOOLBAR MAKES FATAL ERROR IN CATALOG PAGES TO DO -->
-
-       
-
-        
-
+      
     </body>
 </page>
