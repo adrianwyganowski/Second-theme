@@ -9,9 +9,8 @@
     <body>
         <move element="page.main.title" destination="product.info.main" before="-"/>
         
-        <referenceContainer  name="product.info.stock.sku" remove="true"/>
-
-        <referenceBlock  name="product.info.review" remove="true"/>
+        <referenceBlock name="product.info.review" remove="true"/>
+           
 
         
     </body>
