@@ -20,7 +20,7 @@ $format = $block->getDateFormat() ?: \IntlDateFormatter::SHORT;
             <li class="item review-item" itemscope itemprop="review" itemtype="http://schema.org/Review">
                 <div class="review-details">
                     <p class="review-author">
-                        <span class="review-details-label"><?= $block->escapeHtml(__('By')) ?></span>
+                        <span class="review-details-label"><?= $block->escapeHtml(__('By: ')) ?></span>
                         <strong class="review-details-value-user" itemprop="author"><?= $block->escapeHtml($_review->getNickname()) ?></strong>
                     </p>
                     <p class="review-date">
@@ -45,6 +45,9 @@ $format = $block->getDateFormat() ?: \IntlDateFormatter::SHORT;
                 <?php endif; ?>
                 <div class="review-content" itemprop="description">
                     <?= /* @noEscape */ nl2br($block->escapeHtml($_review->getDetail())) ?>
+                </div>
+                <div class="review-border">
+
                 </div>
             </li>
         <?php endforeach; ?>

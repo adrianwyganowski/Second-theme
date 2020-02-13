@@ -51,6 +51,10 @@
 		<move element="menu.top.links.container" destination="header.panel.wrapper" />
 		<move element="header.panel" destination="menu.top.links.container" />
 
+		<!-- Deleted beadcrumbs -->
+
+		<referenceBlock name="breadcrumbs" remove="true" />
+
 		<!-- Created new container for all links in footer and moved old links to it -->
 
 		<container name="footer.links.container" label="Footer links container" htmlTag="div" htmlClass="footer-links-container" />

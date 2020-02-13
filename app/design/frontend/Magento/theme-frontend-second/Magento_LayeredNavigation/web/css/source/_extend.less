@@ -6,7 +6,7 @@
     .chosen-filers-container {
         border-bottom: 1px solid @color-gray-light2;
         margin-bottom: 40px;
-      
+
         .filter-current {
             display: flex;
             margin: 0 10px;
@@ -14,9 +14,9 @@
             .items {
                 display: flex;
                 padding-left: 40px;
-                .item{
-                    margin-left: 40px;
 
+                .item {
+                    margin-left: 40px;
                 }
             }
         }
@@ -43,6 +43,7 @@
 
             .filter-container {
                 width: 100%;
+
                 .filter-options {
                     display: flex;
                     justify-content: space-between;
@@ -53,12 +54,11 @@
 
                     cursor: pointer;
 
-                    .catalog-filter {    
-
+                    .catalog-filter {
                         .filter-options-title {
                             display: flex;
 
-                            .filter-option-span{
+                            .filter-option-span {
                                 position: relative;
                                 bottom: 3px;
                             }
@@ -72,7 +72,6 @@
 
                                 transition: all 0.3s;
                             }
-
                         }
                     }
 
@@ -88,8 +87,6 @@
 
                     .Price-filter-option {
                         min-width: 40%;
-
-
                     }
 
                     .Color-filter-option {
@@ -101,12 +98,11 @@
                             flex-wrap: wrap;
                         }
                     }
-
                 }
+
                 .filters-displayed {
                     max-height: 500px;
                 }
-               
             }
         }
         .toolbar-products {
@@ -125,8 +121,6 @@
     }
 }
 
-
-
 //
 //  Mobile and tablets
 //  ---------------------------------------------
@@ -137,40 +131,38 @@
     (@extremum = "max")
     and
     (@break = @screen__m) {
-
-        .block-content.filter-content {
-            .filter-container {
-                .filter-options {
-                    .Price-filter-option {
-                        .items {
-                            column-count: 1;
-                        }
+    .block-content.filter-content {
+        .filter-container {
+            .filter-options {
+                .Price-filter-option {
+                    .items {
+                        column-count: 1;
                     }
                 }
             }
         }
     }
-
+}
 
 //
 //  Desktop
 //  ---------------------------------------------
 //
 
-    .media-width(@extremum, @break)
+.media-width(@extremum, @break)
     when
     (@extremum = "min")
     and
     (@break = @screen__m) {
-        .block-content.filter-content {
-            .filter-container {
-                .filter-options {
-                    .Price-filter-option {
-                        .items {
-                            column-count: 2;
-                        }
+    .block-content.filter-content {
+        .filter-container {
+            .filter-options {
+                .Price-filter-option {
+                    .items {
+                        column-count: 2;
                     }
                 }
             }
         }
     }
+}
