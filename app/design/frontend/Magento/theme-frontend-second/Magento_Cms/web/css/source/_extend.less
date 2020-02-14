@@ -3,64 +3,67 @@
 //  ---------------------------------------------
 //
 & when (@media-common = true) {
-    .carusel {
-        .tns-item {
-            height: 800px;
-        }
-
-        .first-slide {
-            background-image: url(../images/first-slide.jpg);
-            background-position: 63%;
-
-            color: transparent;
-            -webkit-text-stroke-color: #000;
-
-            text-transform: uppercase;
-
-            .first-slide-text {
-                font-family: Oswald-Bold;
+    .main-page-carusel{
+        margin-top:-20px;
+        .carusel {
+            .tns-item {
+                height: 800px;
             }
-        }
 
-        .second-slide {
-            background-image: url(../images/second-slide.jpg);
-            background-position: center;
-            text-align: center;
+            .first-slide {
+                background-image: url(../images/first-slide.jpg);
+                background-position: 63%;
 
-            .second-slide-texts-container {
-                width: 100%;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                color: transparent;
+                -webkit-text-stroke-color: #000;
 
-                color: #fff;
+                text-transform: uppercase;
 
-                font-family: Oswald-ExtraLight;
-
-                .second-slide-span {
-                    font-family: Oswald-SemiBold;
+                .first-slide-text {
+                    font-family: Oswald-Bold;
                 }
             }
-        }
 
-        .third-slide {
-            position: relative;
+            .second-slide {
+                background-image: url(../images/second-slide.jpg);
+                background-position: center;
+                text-align: center;
 
-            background-image: url(../images/third-slide.jpg);
-            background-position: 40%;
-            color: transparent;
+                .second-slide-texts-container {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
 
-            -webkit-text-stroke-width: 3px;
-            -webkit-text-stroke-color: #000;
+                    color: #fff;
 
-            #third-slide-text {
-                font-family: Oswald-Medium;
+                    font-family: Oswald-ExtraLight;
+
+                    .second-slide-span {
+                        font-family: Oswald-SemiBold;
+                    }
+                }
             }
 
-            #third-slide-header {
-                font-family: Oswald-Bold;
+            .third-slide {
+                position: relative;
+
+                background-image: url(../images/third-slide.jpg);
+                background-position: 40%;
+                color: transparent;
+
+                -webkit-text-stroke-width: 3px;
+                -webkit-text-stroke-color: #000;
+
+                #third-slide-text {
+                    font-family: Oswald-Medium;
+                }
+
+                #third-slide-header {
+                    font-family: Oswald-Bold;
+                }
             }
         }
     }

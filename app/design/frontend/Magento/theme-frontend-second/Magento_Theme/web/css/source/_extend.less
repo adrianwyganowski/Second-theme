@@ -3,8 +3,27 @@
 //  ---------------------------------------------
 //
 & when (@media-common = true) {
+    ::-webkit-scrollbar-track {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+
+        background-color: #f5f5f5;
+    }
+
+    ::-webkit-scrollbar {
+        width: 12px;
+
+        background-color: #f5f5f5;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+
+        background-color: #555;
+    }
+
     #maincontent {
-        margin-top: 56px;
         border-bottom: 1px solid @color-gray-light2;
     }
 
@@ -182,6 +201,10 @@
     (@extremum = "min")
     and
     (@break = @screen__m) {
+    #maincontent {
+        margin-top: 56px;
+    }
+
     .page-header {
         position: fixed;
         z-index: 3;
@@ -261,9 +284,9 @@
                         align-items: center;
                         margin-right: 5px;
 
-                        .counter.qty{
+                        .counter.qty {
                             position: relative;
-                            right:7px;
+                            right: 7px;
 
                             margin: 0;
                             padding: 0 3px 0 0;
@@ -287,11 +310,11 @@
 
                     cursor: pointer;
 
-                    .search-icon{
+                    .search-icon {
                         position: relative;
                         top: 1px;
 
-                        color:#8f8f8f;
+                        color: #8f8f8f;
                     }
 
                     .search-icon::after {
@@ -307,16 +330,16 @@
 
                         font-weight: normal;
                         text-align: center;
-                        font-family: Icons
+                        font-family: Icons;
                     }
                 }
 
-                .search-icon-container:hover{
-                    .search-icon{
-                        color:#000;
+                .search-icon-container:hover {
+                    .search-icon {
+                        color: #000;
                     }
-                    
-                    .search-label{
+
+                    .search-label {
                         text-decoration: none;
                     }
                 }
@@ -327,11 +350,11 @@
 
                     cursor: pointer;
 
-                    .menu-icon{
+                    .menu-icon {
                         position: relative;
                         top: 2px;
 
-                        color:#8f8f8f;
+                        color: #8f8f8f;
                     }
 
                     .menu-icon::after {
@@ -347,16 +370,16 @@
 
                         font-weight: normal;
                         text-align: center;
-                        font-family: Icons
+                        font-family: Icons;
                     }
                 }
 
-                .menu-icon-container:hover{
-                    .menu-icon{
-                        color:#000;
+                .menu-icon-container:hover {
+                    .menu-icon {
+                        color: #000;
                     }
-                    
-                    .menu-label{
+
+                    .menu-label {
                         text-decoration: none;
                     }
                 }
@@ -377,7 +400,7 @@
 
                 transition: top 0.4s;
 
-                a:hover{
+                a:hover {
                     text-decoration: none;
                 }
             }
@@ -408,9 +431,9 @@
 
                     li:last-child {
                         margin: 0;
-                    } 
+                    }
 
-                    a:hover{
+                    a:hover {
                         text-decoration: none;
                     }
                 }
