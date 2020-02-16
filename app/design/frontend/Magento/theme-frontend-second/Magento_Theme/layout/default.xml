@@ -51,6 +51,12 @@
 		<move element="menu.top.links.container" destination="header.panel.wrapper" />
 		<move element="header.panel" destination="menu.top.links.container" />
 
+		<!-- Added link to cart for mobile devices  -->
+
+		<referenceContainer name="header-wrapper">
+			<block name="test" template="Magento_Checkout::moblie_cart_link.phtml" />
+        </referenceContainer>
+		
 		<!-- Deleted beadcrumbs -->
 
 		<referenceBlock name="breadcrumbs" remove="true" />
@@ -75,6 +81,8 @@
 
 		<referenceBlock name="copyright" remove="true" />
 		<referenceBlock name="report.bugs" remove="true" />
+
+
 
 	</body>
 </page>

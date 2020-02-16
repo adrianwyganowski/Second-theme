@@ -113,28 +113,29 @@
         }
     }
 
-    .subtotal {
-        display: flex;
-        margin-bottom: 5px;
-
-        .label {
-            margin-right: 5px;
-        }
-
-        .price {
-            color: @theme__color__primary;
-        }
-    }
-
-    .actions {
-        display: flex;
-        justify-content: center;
-
-        .primary {
+    .block-content{
+        .subtotal {
+            display: flex;
             margin-bottom: 5px;
+    
+            .label {
+                margin-right: 5px;
+            }
+    
+            .price {
+                color: @theme__color__primary;
+            }
+        }
+        .actions {
+            display: flex;
+            justify-content: center;
+    
+            .secondary {
+                font-size: 2.5rem; 
+            }
         }
     }
-
+    
     #shopping-cart-table {
         .item-info {
             .product-item-name {
@@ -142,9 +143,6 @@
                     color: @theme__color__primary;
 
                     font-size: 2.5rem;
-                }
-                a:hover {
-                    text-decoration: none;
                 }
             }
         }
@@ -160,6 +158,32 @@
     (@extremum = "max")
     and
     (@break = @screen__m) {
+    .header.content {
+        padding-right: 0px;
+        .mobile-cart-link-container {
+            display: flex;
+            justify-content: flex-end;
+
+            .mobile-cart-link-a {
+                .mobile-cart-link-span::after {
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    font-size: 35px;
+                    line-height: 33px;
+                    color: #8f8f8f;
+                    content: "\e611";
+                    font-family: "Icons";
+                    margin: 0;
+                    vertical-align: top;
+                    display: inline-block;
+                    font-weight: normal;
+                    overflow: hidden;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
     .page-header {
         .menu-cart-content-container {
             display: none;
@@ -181,5 +205,4 @@
             margin-bottom: 0;
         }
     }
-    
 }

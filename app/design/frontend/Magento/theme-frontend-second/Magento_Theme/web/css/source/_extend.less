@@ -150,6 +150,8 @@
     and
     (@break = @screen__m) {
     .page-header {
+        border-bottom: none;
+
         .logo-container {
             display: flex;
             justify-content: flex-end;
@@ -400,9 +402,6 @@
 
                 transition: top 0.4s;
 
-                a:hover {
-                    text-decoration: none;
-                }
             }
 
             .menu-top-links-container {
@@ -425,17 +424,25 @@
 
                     background: #fff;
 
-                    li:first-child {
-                        margin: 0;
+                    .header.links{
+                        li{
+                            margin:0 15px 0 0;
+                        }
+                        
+                        .item.link.compare{
+                            margin:0;
+
+                            .counter.qty{
+                                margin-right: 15px;
+                            }
+
+                        }
+
+                        li:last-child {
+                            margin: 0;
+                        }
                     }
 
-                    li:last-child {
-                        margin: 0;
-                    }
-
-                    a:hover {
-                        text-decoration: none;
-                    }
                 }
             }
 
